@@ -1,0 +1,30 @@
+create table user(
+	userID varchar(30) not null,
+	userPassWord varchar(30) not null,
+	userNickName varchar(30) not null,
+	userEmail varchar(30) not null,
+	primary key (userID)
+);
+create table request(
+	requestID int not null primary key auto_increment,
+	requestDialectID int,
+	requestDialect varchar(30) not null,
+	requestBigArea varchar(30) not null,
+	requestSmallArea varchar(30) not null,
+	requestMean varchar(300),
+	requestSentence varchar(300),
+	requestReason varchar(300),
+	requestUser varchar(300) not null,
+	requestSeparation varchar(10) not null
+);
+create table dialect(
+	dialectID int not null primary key auto_increment,
+	dialectDialect varchar(30) not null,
+	dialectBigArea varchar(30) not null,
+	dialectSmallArea varchar(30) not null,
+	dialectMean varchar(300) not null,
+	dialectSentence varchar(300) not null,
+	dialectUser varchar(300) not null
+);
+
+insert into user values('manager0','manager0=','운영자','manager0@naver.com');
